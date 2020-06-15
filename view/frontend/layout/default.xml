@@ -1,0 +1,7 @@
+    <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+        <body>
+            <referenceContainer name="main">
+                <block class="Future\ImageSearch\Block\Modal" template="upload_btn.phtml" />
+            </referenceContainer>
+        </body>
+    </page>

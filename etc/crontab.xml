@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="adyen_payment">
+        <job name="future_imagesearch_cloud_update" instance="Future\ImageSearch\Model\Cron" method="processProducts">
+            <schedule>*/1 * * * *</schedule>
+        </job>
+        <job name="future_imagesearch_cloud_cleanup" instance="Future\ImageSearch\Model\Cron" method="cleanupCloud">
+            <schedule>*/1 * * * *</schedule>
+        </job>
+    </group>
+</config>
