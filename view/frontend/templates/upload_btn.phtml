@@ -1,0 +1,23 @@
+<a href="#" id="example-modal-button" data-mage-init='{"search-modal": {"target": "#modal-content"}}'>Search Using Image</a>
+<?php $helper = $this->helper(\Magento\Search\Helper\Data::class); ?> 
+<div id="modal-content">
+    <div class="header"><h2>Search Products Using a picture</h2></div>
+<p>All similar products like the one in your picture will be returned</p>
+<form method="POST" enctype="multipart/form-data" action="<?= $block->getUrl("catalogsearch/result") ?>">
+        <input name="image" type="file"/>
+        <input type="submit" value="Upload!!!">
+        </form>
+     
+</div>
+<style>
+.modal-popup
+{
+    width:50%;
+    
+}
+.modal-popup .footer-modal 
+{
+    display:none;
+}
+
+</style>

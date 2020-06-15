@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  <preference for="Magento\CatalogSearch\Controller\Result\Index"  type="Future\ImageSearch\Controller\Result\Index" />
+
+  <preference for="Magento\Config\Model\Config\Backend\File" type="Future\ImageSearch\Model\Config\Backend\File" />
+
+
+</config>
+

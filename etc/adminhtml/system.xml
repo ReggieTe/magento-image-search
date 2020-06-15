@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>        
+        <section id="imagesearch" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Image Search</label>
+            <tab>catalog</tab>
+            <resource>Future_ImageSearch::imagesearch_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                
+                <field id="module_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>             
+
+                <field id="google_api" translate="label" type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="6" showInDefault="1" showInWebsite="1" >
+                    <label>Google Api Key</label>
+                    <backend_model>Future\ImageSearch\Model\Config\Backend\File</backend_model>
+                    <upload_dir >pub/media</upload_dir>
+                    <comment>Get the key file from your google console in json format</comment>
+                </field>               
+
+                <field id="project_id" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Project ID</label>
+                 <comment>Get this key from your google console</comment>
+                </field>
+                <field id="project_location" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Project Location</label>
+                 <comment>Get this key from your google console</comment>
+                </field>
+                <field id="project_bucket_name" translate="label" type="text" sortOrder="23" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Project Bucket Name</label>
+                 <comment>Get this key from your google console</comment>
+                </field>    
+                <field id="shop_product_category" translate="label" sortOrder="24" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shop Product Category</label>
+                    <comment>Google product vision api is limited to 5 options</comment>
+                    <source_model>Future\ImageSearch\Model\Config\Source\AllowedCategories</source_model>
+                </field>
+                 <field id="project_set_id" translate="label" type="text" sortOrder="23" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Project Set Id</label>
+                 <comment>Any name random name will do</comment>
+                </field> 
+                <field id="project_confidence_score" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Search Confidence Score</label>
+                 <comment>Image Confidence sorce scale is 0 - 1 ,0 = show all possible matches ,1 = show excat match </comment>
+                </field> 
+
+                <field id="project_base_path" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Project Base Path</label>
+                 <comment>Usually pub/media or media </comment>
+                </field> 
+
+
+                <field id="project_media_path" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Project Media Path</label>
+                 <comment>Usually pub/media or media </comment>
+                </field>
+            </group>
+       </section>
+    </system>
+</config>

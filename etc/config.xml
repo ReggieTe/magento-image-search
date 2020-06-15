@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <imagesearch>
+            <general>
+                <module_enable>0</module_enable>
+                <project_id>0</project_id>
+                <project_location>us-east1</project_location>
+                <shop_product_category>general-v1</shop_product_category>
+                <project_set_id>shopproduct1292325</project_set_id>
+                <project_media_path>pub/media/catalog/product</project_media_path>
+                <project_base_path>pub/media</project_base_path>
+                <project_confidence_score>0.19</project_confidence_score>
+                <project_bucket_name>magento_bucket</project_bucket_name>
+            </general>
+        </imagesearch>
+    </default>
+</config>
